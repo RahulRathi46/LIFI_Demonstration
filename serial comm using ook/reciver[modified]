@@ -1,0 +1,13 @@
+// 1 is on and 0 is off in led
+// 1 is 1 & 0 is 0 at data side
+void setup()
+{
+  Serial.begin(9600);   // Serial Port
+  pinMode(5,INPUT);     // Pin setup
+}
+void loop()
+{
+            Serial.println(!digitalRead(5));   // Reader
+            Serial.flush();                   // Flushing Previous Data
+            delay(60);                       // Syn Delay
+}
