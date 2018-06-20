@@ -1,0 +1,58 @@
+int dout=5,i,j;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(dout,OUTPUT);
+}
+
+void stuff(int O)                   // Start bit & Stop bit stuff
+{
+  for(i=0;i<4;i++)
+  {
+    analogWrite(dout,O);
+    Serial.println(O);
+    delay(500);                   // Syn delay 500
+  }
+}
+
+void loop()
+{
+  String a="rahul";
+  char c;
+  if (Serial.available() > 0 && a !="OvEr")
+  {
+        //a=Serial.readStringUntil('\n');   // Data Read
+        for(j=0;j!=a.length()&& a!="OvEr";j++)		// Char selection and termination checking
+        {
+           for(i=0;i<=a.length()-1;i++)
+           {
+            stuff(255);     // Stuff Start bit
+            c=a[j];
+            for ( uint8_t bitMask = 128; bitMask != 0; bitMask = bitMask >> 1 )  // Char to 8 bit combination conversion
+            {
+              if ( c & bitMask )
+                {
+                  analogWrite(dout,255);
+                  Serial.println("1");
+                }
+              else
+                {
+                  analogWrite(dout,0);
+                  Serial.println("0");
+                }
+              delay(500);                    // Syn delay 500
+            }
+            stuff(0);     // Stuff stop bit
+            }
+            Serial.println("Data- -Sent");
+            Serial.flush();
+          }
+          a="OvEr";
+    }
+    else
+    {
+      delay(500);                    // Syn delay 500
+    }
+
+}
