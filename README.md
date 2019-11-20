@@ -33,4 +33,4 @@ If you discover any security related issues, please email :author_email instead 
 
 ## Credits
 
-- Rahul Rathi (VanGiex.RR@Gmail.Com)
+- Rahul Rathi
