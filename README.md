@@ -1,7 +1,4 @@
 ## Light Fidelity
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-## ORIGINALY POSTED : https://gitlab.com/vangiex
 
 LiFi is high speed bi-directional networked and mobile communication of data using light. LiFi comprises of multiple light bulbs that form a wireless network, offering a substantially similar user experience to Wi-Fi except using the light spectrum.
 
