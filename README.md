@@ -15,18 +15,6 @@ It Also Requide LED AND LDR Sensor Module.
 Upload Code Respectivly.
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md)
-
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
-
 ## Credits
 
 - Rahul Rathi
